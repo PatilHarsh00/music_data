@@ -48,12 +48,14 @@ export default function DataTable() {
     fetchItems();
   },[]);
 
+  // Fuction used to search the title in the data
   const searchedData = data.filter((item) =>{
     return(
       item.title.toLowerCase().includes(searchTerm.toLowerCase()) || false
     );
   })
 
+  // Function to create CSV file to download
   const handleDownloadCSV = () => {
     const csvData = convertToCSV(data);
     const blob = new Blob ([csvData], {type : 'text/csv'});
@@ -63,6 +65,7 @@ export default function DataTable() {
     link.click();
   }
 
+  //Function to convert the data to csv format
   const convertToCSV = (data) => {
     const header = Object.keys(data[0]).join(',');
     const rows = data.map((item) => Object.values(item).join(','));
