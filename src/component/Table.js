@@ -39,7 +39,7 @@ export default function Table() {
     },[])
 
     // Download CSV
-    const handleDownloadCSV= () => {
+    const handleDownloadCSV = () => {
         const csvData = convertToCSV(data);
         const blob = new Blob([csvData], {type: 'text/csv'});
         const link = document.createElement('a');
@@ -84,6 +84,7 @@ export default function Table() {
       
         return 0;
       });
+      
       
     // Pagination
     const handlePageChange = (page) =>{

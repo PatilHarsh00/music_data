@@ -1,10 +1,10 @@
 import React from 'react'
-import Table from './component/Table'
+import MusicTable from './component/MusicTable'
 
 export default function App(){
   return(
     <div>
-      <Table/>
+      <MusicTable/>
     </div>
   )
 }
