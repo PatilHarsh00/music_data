@@ -22,6 +22,7 @@ export default function DataTable() {
   const[searchTerm, setSearchTerm] = useState('')
 
   useEffect(()=>{
+    //Fetching the data from json file and mapping them
     async function fetchItems(){
       try {
         const response = await axios.get('/playlist.json');
